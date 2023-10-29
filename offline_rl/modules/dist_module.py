@@ -5,7 +5,7 @@ import torch.nn as nn
 
 class NormalWrapper(torch.distributions.Normal):
     def log_prob(self, actions):
-        return super().log_prob(actions).sum(-1, keepdim=True)
+        return super().log_prob(actions).sum(-1, keepdim=True) ## 在代码中，`super().log_prob(actions)` 计算了给定动作向量 `actions` 的对数概率。由于对数概率是负数，因此对数概率的和越小，动作向量的熵就越大。因此，`sum(-1, keepdim=True)` 的作用是对每个动作向量的对数概率进行求和，从而计算动作向量的熵。这个熵将被用于计算熵正则化项的值，从而影响策略网络的训练目标。 
 
     def entropy(self):
         return super().entropy().sum(-1)

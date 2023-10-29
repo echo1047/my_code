@@ -15,7 +15,8 @@ from offline_rl.networks.mlp import MLP
 from offline_rl.modules.dist_module import DiagGaussian, TanhDiagGaussian
 from offline_rl.modules.actor_module import ActorProb
 from offline_rl.modules.critic_module import Critic
-from offline_rl.policy.model_free.cql import CQLPolicy
+# from offline_rl.policy.model_free.cql import CQLPolicy
+from offline_rl.buffer.replaybuffer import ReplayBuffer
 
 
 def get_args():
