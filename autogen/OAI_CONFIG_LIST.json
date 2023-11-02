@@ -1,0 +1,7 @@
+[
+    {
+        "model": "gpt-4",
+        "api_key": "sk-2BRwwRilKOtqA6MTvKDRN1EgepnJ7xPH5UxM03n09NP6DzJE",
+        "api_base": "https://api.openai-proxy.org"
+    }
+]
